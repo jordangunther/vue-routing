@@ -22,6 +22,17 @@
                     hash: '#data'
                 }
             }
+        },
+        beforeRouteEnter(to, from, next) {
+            if (true) {
+                next();
+            } else {
+                next(false)
+            }
+            // You have to use vm as a callback if you want to access the data
+            // next(vm => {
+            //     vm.link;
+            // });
         }
     }
 </script>
